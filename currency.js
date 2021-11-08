@@ -26,9 +26,14 @@ const response = await fetch("./currencies.json");
    var nameCurrInputP = "";
    var nameCurrOutputP = "";
    var nameCurrInputS = "";
-    var nameCurrOutputS = "";
-      for (var key in curr)
-      {
+   var nameCurrOutputS = "";
+
+   if (input === "" || output === "" || amount === "")
+      return false;
+   else {
+
+      //Finding whether the currency code input is present in the json file and getting symbol and plural currency
+      for (var key in curr) {
 
          if (key !== input)
             continue;
@@ -40,9 +45,9 @@ const response = await fetch("./currencies.json");
             nameCurrInputS = curr[key].singular;
             break;
          }
-   }
-    for (var key in curr)
-      {
+      }
+      //Finding whether the currency code output is present in the json file and getting symbol and plural currency
+      for (var key in curr) {
 
          if (key !== output)
             continue;
@@ -51,17 +56,15 @@ const response = await fetch("./currencies.json");
 
             outputSym = curr[key].symbol;
             nameCurrOutputP = curr[key].plural;
-             nameCurrOutputS = curr[key].singular;
+            nameCurrOutputS = curr[key].singular;
             break;
          }
       }
-   document.querySelector('.content-display').innerHTML = `Convert ${amount} "${inputSym}" ${nameCurrInputP} To  <span class="res">"${outputSym}"
+      document.querySelector('.content-display').innerHTML = `Convert ${amount} "${inputSym}" ${nameCurrInputP} To  <span class="res">"${outputSym}"
  ${nameCurrOutputP}</span>`
 
 
-   if (document.getElementById('currency-input').value === "")
-      document.getElementById('result').innerHTML=``;
-   else {
+
       const response = await fetch(`https://api.exchangerate.host/convert?from=${input}&to=${output}`)
       const json = await response.json();
       const singular = (json.info.rate).toFixed(4);
@@ -71,7 +74,7 @@ const response = await fetch("./currencies.json");
                   ${inputSym} 1 ${nameCurrInputS} = ${outputSym} <span class="res">${singular}</span> ${nameCurrOutputS}<br><hr>
               ${inputSym} ${amount} ${nameCurrInputP} = ${outputSym} <span class="res">${result}</span> ${nameCurrOutputP}</p>`;
 
- }
+   }
 
 }
 
