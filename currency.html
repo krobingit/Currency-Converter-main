@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+
+    <!---- CSS FILE AND FONT AWESOME-->
+    <link rel="stylesheet"
+        href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="currency.css">
+
+    <!---GOOGLE FONTS-->
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com"
+        crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Acme&family=Fira+Sans:wght@600&family=Poppins&display=swap"
+        rel="stylesheet">
+    <!--Bootstrap-->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+        crossorigin="anonymous">
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="title" id="heading"><i
+                class="fas fa-hand-holding-usd"></i>
+            Currency Converter
+        </h1>
+        <p class="title">* Check live foreign currency
+            exchange rates * </p>
+        <p class="title content-display"></p>
+    </div>
+    <form>
+        <div class="currency-container">
+            <div class="currency-from-to">
+
+                <label for="currency-input"
+                    class="title sub-head">From</label>
+                <input class="textbox" placeholder="Search"
+                    type="search" id="currency-input"
+                    list="currencyListIn">
+                <datalist id="currencyListIn">
+                </datalist>
+
+                <div>
+                    <button type="button"
+                        class="btn btn-primary btn-lg"
+                        onclick="swap()" id="sw"><i
+                            class="fas fa-exchange-alt"
+                            id="arrow"></i></button>
+                </div>
+                <label for="currency-output"
+                    class="title sub-head">To</label>
+                <input class="textbox" placeholder="Search"
+                    type="search" id="currency-output"
+                    list="currencyListOut">
+                <datalist id="currencyListOut">
+                </datalist>
+
+            </div>
+            <div class="currency-from-to">
+
+                <div>
+                    <label for="amount"
+                        class="title sub-head">Amount</label>
+                    <input class="textbox" type="number"
+                        id="amount"
+                        oninput="convert(document.getElementById('currency-input')
+              .value,document.getElementById('currency-output').value,document.getElementById('amount').value)"
+                        placeholder="Amount">
+                </div>
+                <div>
+                    <button type="button"
+                        class="btn btn-primary btn-lg"
+                        id="convertbtn"
+                        onclick="convert(document.getElementById('currency-input')
+              .value,document.getElementById('currency-output').value,document.getElementById('amount').value)">Convert</button>
+                </div>
+             </div>
+             <div class="displayResult">
+                <div id="result">
+                </div>
+                <div>
+                    <button type="reset"
+                        class="btn btn-primary btn-lg"
+                        onclick="reset()">Reset
+                        Values</button>
+                </div>
+            </div>
+
+
+        </div>
+
+    </form>
+
+    <script src="currency.js"></script>
+</body>
+
+</html>
