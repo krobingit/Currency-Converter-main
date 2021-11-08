@@ -5,12 +5,10 @@ font-size:10px;
 body{
 
 font-family: 'Poppins', sans-serif;
-background-image: url("https://static.vecteezy.com/system/resources/previews/001/775/527/non_2x/money-transfer-global-currency-stock-exchange-stock-illustration-vector.jpg");
+background-image: url("./bg-image.jpg");
 background-size: cover;
-background-position: center;
 margin:2rem;
 font-size:1.5rem;
-
 }
 form{
 display: flex;
@@ -37,7 +35,7 @@ width:90rem;
 }
 .textbox{
 display: block;
-width:15rem;
+width:17rem;
 height:4rem;
 border:none;
 border-radius: 0.6rem;
@@ -134,5 +132,10 @@ justify-content: center;
 #arrow{
 transform: rotate(90deg);
 }
-
+.displayResult{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
 }
