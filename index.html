@@ -46,7 +46,7 @@
             exchange rates * </p>
         <p class="title content-display"></p>
     </div>
-    <form>
+    <main>
         <div class="currency-container">
             <div class="currency-from-to">
 
@@ -78,7 +78,7 @@
 
                 <div>
                     <label for="amount"
-                        class="title sub-head">Amount</label>
+                        class="title sub-head" id="amountLabel">Amount</label>
                     <input class="textbox" type="number"
                         id="amount"
                         oninput="convert(document.getElementById('currency-input')
@@ -99,7 +99,7 @@
                 <div>
                     <button type="reset"
                         class="btn btn-primary btn-lg"
-                        onclick="reset()">Reset
+                        onclick="window.location.reload()">Reset
                         Values</button>
                 </div>
             </div>
@@ -107,7 +107,7 @@
 
         </div>
 
-    </form>
+    </main>
 
     <script src="currency.js"></script>
 </body>

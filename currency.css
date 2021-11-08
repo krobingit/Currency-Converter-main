@@ -10,7 +10,7 @@ background-size: cover;
 margin:2rem;
 font-size:1.5rem;
 }
-form{
+main{
 display: flex;
 align-items: flex-start;
 justify-content: center;
@@ -76,7 +76,7 @@ font-size:1.5rem;
 #sw{
 width:8rem;
 }
-.res{
+.HighlightResult{
 color:orangered;
 font-weight: bold;
 }

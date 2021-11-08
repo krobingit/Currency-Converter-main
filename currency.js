@@ -60,19 +60,17 @@ const response = await fetch("./currencies.json");
             break;
          }
       }
-      document.querySelector('.content-display').innerHTML = `Convert ${amount} "${inputSym}" ${nameCurrInputP} To  <span class="res">"${outputSym}"
+      document.querySelector('.content-display').innerHTML = `Convert ${amount} "${inputSym}" ${nameCurrInputP} To  <span class="HighlightResult">"${outputSym}"
  ${nameCurrOutputP}</span>`
-
-
-
+document.querySelector("#amountLabel").innerText=`Amount in (${inputSym})`
       const response = await fetch(`https://api.exchangerate.host/convert?from=${input}&to=${output}`)
       const json = await response.json();
       const singular = (json.info.rate).toFixed(4);
       const result = (amount * (json.info.rate)).toFixed(3);
-      document.getElementById('result').innerHTML = `<p>${outputSym} <span class="res">${result}</span> ${nameCurrOutputP}<br>
+      document.getElementById('result').innerHTML = `<p><span class="HighlightResult"> ${outputSym} ${result}</span> ${nameCurrOutputP}<br>
                                                <hr>
-                  ${inputSym} 1 ${nameCurrInputS} = ${outputSym} <span class="res">${singular}</span> ${nameCurrOutputS}<br><hr>
-              ${inputSym} ${amount} ${nameCurrInputP} = ${outputSym} <span class="res">${result}</span> ${nameCurrOutputP}</p>`;
+                  ${inputSym} 1 ${nameCurrInputS} =  <span class="HighlightResult"> ${outputSym} ${singular}</span> ${nameCurrOutputS}<br><hr>
+              ${inputSym} ${amount} ${nameCurrInputP} = <span class="HighlightResult"> ${outputSym} ${result}</span> ${nameCurrOutputP}</p>`;
 
    }
 
@@ -88,8 +86,9 @@ function swap(){
  }
 
 }
-
+/*
 function reset() {
    document.querySelector("form").reset();
-
+document.querySelector("#amountLabel").innerText=`Amount`
 }
+*/
