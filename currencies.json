@@ -323,6 +323,12 @@
             "symbol": "BSD",
             "symbol-alt-narrow": "$"
           },
+          "BTC":{
+            "displayName": "Bitcoin",
+            "singular": "Bitcoin",
+            "plural": "Bitcoins",
+            "symbol": "฿"
+          },
           "BTN": {
             "displayName": "Bhutanese Ngultrum",
             "singular": "Bhutanese ngultrum",
