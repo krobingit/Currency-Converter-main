@@ -10,6 +10,7 @@ background-size: cover;
 margin:2rem;
 font-size:1.5rem;
 }
+
 main{
 display: flex;
 align-items: flex-start;
@@ -35,19 +36,21 @@ width:90rem;
 }
 .textbox{
 display: block;
-width:17rem;
-height:4rem;
+width:18rem;
+height:4.5rem;
 border:none;
-border-radius: 0.6rem;
-background: whitesmoke;
+border-radius: 1rem;
+background-color:cornsilk;
 margin: 2rem 0;
 padding:1.5rem;
 font-size:2rem;
 color:rgb(29, 29, 134);
+transition: all 0.3s ease-out;
 }
 .textbox:focus{
 outline:none;
-border:2px solid rgb(29, 29, 134);
+ box-shadow: 0 0 5px rgb(29, 29, 134);
+border:1.8px solid rgb(29, 29, 134);
 }
 .currency-container div{
 margin:1rem;
@@ -71,7 +74,7 @@ width:15rem;
 height:4rem;
 }
 #arrow{
-font-size:1.5rem;
+font-size:2rem;
 }
 #sw{
 width:8rem;
@@ -130,6 +133,7 @@ justify-content: center;
 }
 #arrow{
 transform: rotate(90deg);
+
 }
 .displayResult{
 display: flex;

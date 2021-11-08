@@ -60,7 +60,7 @@ const response = await fetch("./currencies.json");
             break;
          }
       }
-      document.querySelector('.content-display').innerHTML = `Convert ${amount} "${inputSym}" ${nameCurrInputP} To  <span class="HighlightResult">"${outputSym}"
+      document.querySelector('.content-display').innerHTML = `Convert ${amount} '${inputSym}' ${nameCurrInputP} To  <span class="HighlightResult">'${outputSym}'
  ${nameCurrOutputP}</span>`
 document.querySelector("#amountLabel").innerText=`Amount in (${inputSym})`
       const response = await fetch(`https://api.exchangerate.host/convert?from=${input}&to=${output}`)
