@@ -75,6 +75,7 @@ height:4rem;
 }
 #arrow{
 font-size:2rem;
+transform: rotate(90deg);
 }
 #sw{
 width:8rem;
@@ -132,10 +133,6 @@ text-align: center;
 display: flex;
 flex-direction: column;
 justify-content: center;
-}
-#arrow{
-transform: rotate(90deg);
-
 }
 .displayResult{
 display: flex;
