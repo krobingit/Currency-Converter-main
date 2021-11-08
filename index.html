@@ -79,9 +79,8 @@
                 <div>
                     <label for="amount"
                         class="title sub-head" id="amountLabel">Amount</label>
-                    <input class="textbox" type="number"
-                        id="amount"
-                        oninput="convert(document.getElementById('currency-input')
+                    <input class="textbox" type="tel"
+                        id="amount" maxlength="20" oninput="convert(document.getElementById('currency-input')
               .value,document.getElementById('currency-output').value,document.getElementById('amount').value)"
                         placeholder="Amount">
                 </div>
