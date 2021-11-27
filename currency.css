@@ -3,12 +3,12 @@ font-size:10px;
 }
 
 body{
-
 font-family: 'Poppins', sans-serif;
-background-image: url("./bg-image.jpg");
+background-image: linear-gradient(to right top, #d16ba5, #a45793, #7a457e, #513366, #2c214c, #211f48, #141c44, #031a40, #062653, #073367, #06407c, #004e92);
 background-size: cover;
 margin:2rem;
 font-size:1.5rem;
+min-height: 100vh;
 }
 
 main{
